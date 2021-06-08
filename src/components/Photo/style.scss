@@ -1,0 +1,91 @@
+$photo-width: 300px;
+
+.photo-wrapper {
+  display: inline-block;
+  height: $photo-width * 4 / 3;
+  width: $photo-width;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 16px 16px 8px rgba(0,0,0,0.25);
+}
+
+#original-photo {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.img-filter-wrapper {
+  border: 8px solid #CECECE;
+}
+
+#bw-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-$photo-width * 210 / 300, 0) rotate(8.53deg) scale(1.2);
+  overflow: hidden;
+}
+
+.img-placeholder {
+  position: relative;
+  width: $photo-width;
+  height: $photo-width * 4 / 3;
+}
+
+#bw-filter {
+  position: absolute;
+  transform: translate($photo-width * 100 / 300, -$photo-width * 20 / 300) rotate(-8.53deg) scale(0.9);
+  transform-origin: center;
+  left: 0;
+  top: 0;
+  filter: grayscale(100%);
+}
+
+#red-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(184px, -200px) rotate(8.53deg) scale(1.2);
+  overflow: hidden;
+}
+
+#red-filter {
+  position: absolute;
+  transform: translate(-80px, 183px) rotate(2deg) scale(1.3);
+  transform-origin: center;
+  left: 0;
+  top: 0;
+  mix-blend-mode: darken;
+}
+
+#red-placeholder {
+  background-color: red;
+  mix-blend-mode: darken;
+  z-index: 100;
+}
+
+#teal-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(116px, 250px) rotate(8.53deg) scale(1.2);
+  overflow: hidden;
+}
+
+#teal-filter {
+  position: absolute;
+  transform: translate(-144px, -226px) rotate(-21deg) scale(1.3);
+  transform-origin: center;
+  left: 0;
+  top: 0;
+  mix-blend-mode: darken;
+}
+
+#teal-placeholder {
+  background-color: #00FFFF;
+  mix-blend-mode: darken;
+  z-index: 100;
+}
