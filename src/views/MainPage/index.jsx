@@ -1,13 +1,14 @@
-import React from 'react'
-import Banner from '../../components/Banner/Banner'
-import Photo from '../../components/Photo/Photo'
-import CornerMenu from '../../components/CornerMenu'
-export default function MainPage(props) {
+import React from 'react';
+import Banner from '../../components/Banner';
+import Photo from '../../components/Photo';
+import CornerMenu from '../../components/CornerMenu';
+
+export default function MainPage() {
   return (
     <>
-      <CornerMenu/>
-      <Banner/>
-      <Photo/>
+      <CornerMenu />
+      <Banner />
+      <Photo />
     </>
   );
 }

@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import './style.scss'
+import React, { useState } from 'react';
+import './style.scss';
 
-export default function CornerMenu(props) {
+export default function CornerMenu() {
   const [openMenu, setOpenMenu] = useState(false);
-  
+
   function getMenuClasses() {
-    return `menu ${openMenu?'open':''}`;
+    return `menu ${openMenu ? 'open' : ''}`;
   }
 
   function toggleMenu() {
@@ -15,15 +15,14 @@ export default function CornerMenu(props) {
   return (
     <div>
       <div className={getMenuClasses()}>
-        <button className="circle" onClick={()=>toggleMenu()}>
+        <button className="circle" type="button" onClick={() => toggleMenu()}>
           <span className="menu-text">Menú</span>
         </button>
-        <div className="sub-menu sub-menu-1"></div>
-        <div className="sub-menu sub-menu-2"></div>
-        <div className="sub-menu sub-menu-3"></div>
-        <div className="sub-menu sub-menu-4"></div>
+        <div className="sub-menu sub-menu-1" />
+        <div className="sub-menu sub-menu-2" />
+        <div className="sub-menu sub-menu-3" />
+        <div className="sub-menu sub-menu-4" />
       </div>
-      <button>a</button>
     </div>
-  )
+  );
 }
