@@ -16,7 +16,7 @@ export default function CornerMenu() {
     <div>
       <div className={getMenuClasses()}>
         <button className="circle" type="button" onClick={() => toggleMenu()}>
-          <span className="menu-text">Menú</span>
+          <span className="menu-text">Menu</span>
         </button>
         <div className="sub-menu sub-menu-1" />
         <div className="sub-menu sub-menu-2" />

@@ -1,14 +1,17 @@
 import React from 'react';
-import Banner from '../../components/Banner';
+import Bio from '../../components/Bio';
 import Photo from '../../components/Photo';
 import CornerMenu from '../../components/CornerMenu';
+import './style.scss';
 
 export default function MainPage() {
   return (
     <>
       <CornerMenu />
-      <Banner />
-      <Photo />
+      <div className="main-page">
+        <Bio />
+        <Photo />
+      </div>
     </>
   );
 }
