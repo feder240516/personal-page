@@ -1,0 +1,406 @@
+$photo-width: 300px;
+
+@function normalize($val) {
+  @return $photo-width * $val / 300px;
+}
+
+$default-transform: translate(0, 0) rotate(0) scale(1);
+$default-red-wrapper-transform: translate(normalize(120px), normalize(-160px)) rotate(8.53deg) scale(1);
+$red-wrapper-transform: translate(normalize(176px), normalize(-200px)) rotate(8.53deg) scale(1.2);
+$default-red-filter-transform: translate(normalize(-95px), normalize(176px)) rotate(-8.53deg) scale(1);
+$red-filter-transform: translate(normalize(-80px), normalize(183px)) rotate(2deg) scale(1.3);
+$bw-wrapper-transform: translate(normalize(-210px), normalize(0px)) rotate(8.53deg) scale(1.2);
+$bw-filter-transform: translate(normalize(100px), normalize(-20px)) rotate(-8.53deg) scale(0.9);
+$default-teal-wrapper-transform: translate(normalize(63px), normalize(220px)) rotate(8.53deg) scale(1);
+$teal-wrapper-transform: translate(normalize(108px), normalize(250px)) rotate(8.53deg) scale(1.2);
+$default-teal-filter-transform: translate(normalize(-95px), normalize(-208px)) rotate(-8.53deg) scale(1);
+$teal-filter-transform: translate(normalize(-144px), normalize(-226px)) rotate(-21deg) scale(1.3);
+
+
+
+.photo-wrapper {
+  display: inline-block;
+  height: $photo-width * 4 / 3;
+  width: $photo-width;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 16px 16px 8px rgba(0,0,0,0.25);
+  &:hover {
+    #bw-wrapper {
+      transform: $default-transform;
+      border-width: 0;
+    }
+    #bw-filter {
+      transform: $default-transform;
+      filter: grayscale(0);
+    }
+    #red-wrapper {
+      transform: $default-red-wrapper-transform;
+      border-width: 0;
+    }
+    #red-filter {
+      transform: $default-red-filter-transform;
+    }
+    #red-placeholder {
+      background-color: #ff000000
+    }
+    #teal-wrapper {
+      transform: $default-teal-wrapper-transform;
+      border-width: 0;
+    }
+    #teal-filter {
+      transform: $default-teal-filter-transform;
+    }
+    #teal-placeholder {
+      background-color: #00ffff00
+    }
+  }
+}
+
+#original-photo {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: $photo-width;
+  height: $photo-width * 4 / 3;
+}
+
+.img-filter-wrapper {
+  border-color: #CECECE;
+  border-style: solid;
+  // border: 8px solid #CECECE;
+  // animation-name: img-fiter-keyframes;
+  height:100%;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.img-filter {
+  width: $photo-width;
+  height: $photo-width * 4 / 3;
+}
+
+.animated-props {
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  transform-origin: center;
+  transition: all 1s ease,
+              border-width 0.5s ease-in;
+}
+
+@keyframes img-fiter-keyframes {
+  0% {
+    border-width: 0;
+  }
+  25% {
+    border-width: 8px;
+  }
+  75% {
+    border-width: 8px;
+  }
+  100% {
+    border-width: 0;
+  }
+}
+
+.img-placeholder {
+  position: relative;
+  width: $photo-width;
+  height: $photo-width * 4 / 3;
+}
+
+#bw-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transform: $bw-wrapper-transform;
+  border-width: normalize(4px);
+  // animation-name: bw-wrapper-keyframes;
+}
+
+#bw-filter {
+  position: absolute;
+  transform-origin: center;
+  left: 0;
+  top: 0;
+  filter: grayscale(100%);
+  transform: $bw-filter-transform;
+  // animation-name: bw-filter-keyframes;
+}
+
+#red-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transform: $red-wrapper-transform;
+  border-width: normalize(4px);
+  // animation-name: red-wrapper-keyframes;
+}
+
+#red-filter {
+  position: absolute;
+  transform-origin: center;
+  left: 0;
+  top: 0;
+  mix-blend-mode: darken;
+  transform: $red-filter-transform;
+  // animation-name: red-filter-keyframes;
+}
+
+#red-placeholder {
+  mix-blend-mode: darken;
+  z-index: 100;
+  background-color: #ff0000
+  // animation-name: red-placeholder-keyframes;
+}
+
+#teal-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  // animation-name: teal-wrapper-keyframes;
+  transform: $teal-wrapper-transform;
+  border-width: normalize(4px);
+}
+
+#teal-filter {
+  position: absolute;
+  // animation-name: teal-filter-keyframes;
+  transform-origin: center;
+  left: 0;
+  top: 0;
+  mix-blend-mode: darken;
+  transform: $teal-filter-transform;
+}
+
+#teal-placeholder {
+  // background-color: #00FFFF;
+  background-color: #00FFFF;
+  mix-blend-mode: darken;
+  z-index: 100;
+  // animation-name: teal-placeholder-keyframes;
+}
+
+@keyframes red-wrapper-keyframes {
+  0% {
+    transform: $default-red-wrapper-transform;
+    border-width: 0;
+  }
+  10% {
+    transform: $default-red-wrapper-transform;
+  }
+  18% {
+    border-width: 0;
+  }
+  25% {
+    transform: $red-wrapper-transform;
+    border-width: normalize(4px);
+  }
+  75% {
+    transform: $red-wrapper-transform;
+    border-width: normalize(4px);
+  }
+  82% {
+    border-width: 0;
+  }
+  90% {
+    transform: $default-red-wrapper-transform;
+  }
+  100% {
+    transform: $default-red-wrapper-transform;
+    border-width: 0;
+  }
+}
+
+@keyframes red-filter-keyframes {
+  0% {
+    transform: $default-red-filter-transform;
+  }
+  10% {
+    transform: $default-red-filter-transform;
+  }
+  25% {
+    transform: $red-filter-transform;
+  }
+  75% {
+    transform: $red-filter-transform;
+  }
+  90% {
+    transform: $default-red-filter-transform;
+  }
+  100% {
+    transform: $default-red-filter-transform;
+  }
+}
+
+@keyframes red-placeholder-keyframes {
+  0% {
+    background-color: #ff000000;
+    // transform: $default-transform;
+  }
+  10% {
+    background-color: #ff000000;
+    // transform: $default-transform;
+  }
+  25% {
+    background-color: #ff0000;
+    // transform: $teal-filter-transform;
+  }
+  75% {
+    background-color: #ff0000;
+    // transform: $teal-filter-transform;
+  }
+  90% {
+    background-color: #ff000000;
+    // transform: $default-transform;
+  }
+  100% {
+    background-color: #ff000000;
+    // transform: $default-transform;
+  }
+}
+
+@keyframes bw-wrapper-keyframes {
+  0% {
+    transform: $default-transform;
+    border-width: 0;
+  }
+  10% {
+    transform: $default-transform;
+  }
+  18% {
+    border-width: 0;
+  }
+  25% {
+    transform: $bw-wrapper-transform;
+    border-width: normalize(4px);
+  }
+  75% {
+    transform: $bw-wrapper-transform;
+    border-width: normalize(4px);
+  }
+  82% {
+    border-width: 0;
+  }
+  90% {
+    transform: $default-transform;
+  }
+  100% {
+    border-width: 0;
+    transform: $default-transform;
+  }
+}
+
+@keyframes bw-filter-keyframes {
+  0% {
+    transform: $default-transform;
+    filter: grayscale(0);
+  }
+  10% {
+    transform: $default-transform;
+    filter: grayscale(0);
+  }
+  25% {
+    transform: $bw-filter-transform;
+    filter: grayscale(100%);
+  }
+  75% {
+    transform: $bw-filter-transform;
+    filter: grayscale(100%);
+  }
+  90% {
+    transform: $default-transform;
+    filter: grayscale(0);
+  }
+  100% {
+    transform: $default-transform;
+    filter: grayscale(0);
+  }
+}
+
+@keyframes teal-wrapper-keyframes {
+  0% {
+    transform: $default-teal-wrapper-transform;
+    border-width: 0;
+  }
+  10% {
+    transform: $default-teal-wrapper-transform;
+    // border-width: 0;
+  }
+  18% {
+    border-width: 0;
+  }
+  25% {
+    transform: $teal-wrapper-transform;
+    border-width: normalize(4px);
+  }
+  75% {
+    transform: $teal-wrapper-transform;
+    border-width: normalize(4px);
+  }
+  82% {
+    border-width: 0;
+  }
+  90% {
+    transform: $default-teal-wrapper-transform;
+    // border-width: 0;
+  }
+  100% {
+    transform: $default-teal-wrapper-transform;
+    border-width: 0;
+  }
+}
+
+@keyframes teal-filter-keyframes {
+  0% {
+    transform: $default-teal-filter-transform;
+  }
+  10% {
+    transform: $default-teal-filter-transform;
+  }
+  25% {
+    transform: $teal-filter-transform;
+  }
+  75% {
+    transform: $teal-filter-transform;
+  }
+  90% {
+    transform: $default-teal-filter-transform;
+  }
+  100% {
+    transform: $default-teal-filter-transform;
+  }
+}
+
+@keyframes teal-placeholder-keyframes {
+  0% {
+    background-color: #00FFFF00;
+  }
+  10% {
+    background-color: #00FFFF00;
+  }
+  25% {
+    background-color: #00FFFF;
+  }
+  75% {
+    background-color: #00FFFF;
+  }
+  90% {
+    background-color: #00FFFF00;
+  }
+  100% {
+    background-color: #00FFFF00;
+  }
+}
+
+.wrapped-wrapper {
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
