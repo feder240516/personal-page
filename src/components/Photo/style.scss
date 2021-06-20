@@ -27,6 +27,7 @@ $teal-filter-transform: translate(normalize(-144px), normalize(-226px)) rotate(-
   overflow: hidden;
   position: relative;
   box-shadow: 16px 16px 8px rgba(0,0,0,0.25);
+  flex: 0 0 $photo-width;
   &:hover {
     #bw-wrapper {
       transform: $default-transform;
