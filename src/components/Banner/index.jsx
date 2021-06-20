@@ -1,9 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-export default function Banner(props) {
-  
-
-
+export default function Banner() {
   return (
     <div>
       <h1>Welcome to my portfolio!</h1>
