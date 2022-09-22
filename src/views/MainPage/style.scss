@@ -1,7 +1,13 @@
 .main-page {
-  display: flex;
-  max-width:100%;
-  box-sizing: border-box;
-  margin: 100px;
-  align-items: center;
+  .page-1 {
+    display: flex;
+    max-width:100%;
+    box-sizing: border-box;
+    margin: 100px;
+    align-items: center;
+  }
+
+  .page-2 {
+    margin: 100px;
+  }
 }

@@ -18,11 +18,24 @@ export default function CornerMenu() {
         <button className="circle" type="button" onClick={() => toggleMenu()}>
           <span className="menu-text">Menu</span>
         </button>
-        <div className="sub-menu sub-menu-1" />
-        <div className="sub-menu sub-menu-2" />
-        <div className="sub-menu sub-menu-3" />
-        <div className="sub-menu sub-menu-4" />
+        <div id="sub-menu-1" className="sub-menu">
+          <button type="button"><i className="material-icons">account_circle</i></button>
+          <span>About me</span>
+        </div>
+        <div id="sub-menu-2" className="sub-menu">
+          <button type="button"><i className="material-icons">code</i></button>
+          <span>Tech stack</span>
+        </div>
+        <div id="sub-menu-3" className="sub-menu">
+          <button type="button"><i className="material-icons">work</i></button>
+          <span>My projects</span>
+        </div>
+        <div id="sub-menu-4" className="sub-menu">
+          <button type="button"><i className="material-icons">info</i></button>
+          <span>Contact me</span>
+        </div>
       </div>
+      <div className="bg-overlay" onClick={() => toggleMenu()} role="presentation" />
     </div>
   );
 }
