@@ -33,10 +33,6 @@ export default function Gallery() {
     name: 'Todo App',
     img: todoAppImg,
     url: 'https://feder240516.github.io/TodoApp/',
-  }, {
-    name: 'Todo App',
-    img: todoAppImg,
-    url: 'https://feder240516.github.io/TodoApp/',
   }];
   return (
     <section className="gallery">
