@@ -16,7 +16,7 @@ $photo-width: $photo-standard * 1px;
   height: calc($photo-width * 4 / 3);
   width: $photo-width;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
   overflow: hidden;
   position: relative;
   box-shadow: 16px 16px 8px rgba(0,0,0,0.25);

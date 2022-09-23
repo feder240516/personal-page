@@ -1,13 +1,14 @@
 .main-page {
   .page-1 {
     display: flex;
-    max-width:100%;
+    max-width:1100px;
     box-sizing: border-box;
-    margin: 100px;
+    margin: 100px auto;
     align-items: center;
   }
 
   .page-2 {
-    margin: 100px;
+    margin: 100px auto;
+    width: min-content;
   }
 }
