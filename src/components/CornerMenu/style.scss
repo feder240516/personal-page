@@ -1,4 +1,6 @@
-$menu-color: #0099A3;
+@use "../../globals.scss";
+
+$menu-color: globals.$primary-color;
 $menu-color-active: #12c9d6;
 $circle-size: 300px;
 $no-shadow: 0 0 0 0;
