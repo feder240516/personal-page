@@ -92,7 +92,7 @@ export default function MainPage() {
         <Switch
           groupName="project-types"
           options={[
-            { name: 'Personnel Projects', id: projectTypes.OWN },
+            { name: 'Own Projects', id: projectTypes.OWN },
             { name: 'Work Projects', id: projectTypes.WORK },
           ]}
           onSelection={onChangeProjectType}
