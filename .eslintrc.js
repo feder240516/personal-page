@@ -15,5 +15,6 @@ module.exports = {
   rules: {
     'linebreak-style': 0,
     'jsx-a11y/label-has-associated-control': [2, { assert: 'either' }],
+    'no-unused-vars': 1,
   },
 };
