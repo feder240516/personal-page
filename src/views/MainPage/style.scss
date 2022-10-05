@@ -10,5 +10,8 @@
   .page-2 {
     margin: 100px auto;
     width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
