@@ -36,7 +36,15 @@ export default function GalleryItem({ image, name, url, technologies = [] }) {
       <Popup isOpen={isOpenItem} setIsOpen={setIsOpenItem}>
         <div className="gallery-item-popup">
           <h2 className="popup-project-title">{name}</h2>
-          <img src={image} alt={`Imagen del proyecto ${name}`} height="350px" width="350px" />
+          <div className="image-carousel">
+            <button className="carousel-btn carousel-left-arrow" type="button">
+              <i className="material-icons">chevron_left</i>
+            </button>
+            <img src={image} alt={`Imagen del proyecto ${name}`} height="350px" width="350px" />
+            <button className="carousel-btn carousel-right-arrow" type="button">
+              <i className="material-icons">chevron_right</i>
+            </button>
+          </div>
           <p>
             <a href={url} target="_blank" rel="noopener noreferrer">
               <i className="material-icons">link</i>
