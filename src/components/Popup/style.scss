@@ -13,13 +13,20 @@ $overlay-color: #aaaaaaaa;
   left: 0;
 
   .popup-content {
+    --animation-time: 500ms;
     background-color: globals.$secondary-color;
     box-sizing: border-box;
     grid-column: 1;
     grid-row: 1;
     margin: 180px;
     position: relative;
+    transform: scale(1);
+    transition: all var(--animation-time, 0);
     z-index: 5;
+
+    &.unmounted {
+      transform: scale(0);
+    }
   }
 
   .popup-overlay {

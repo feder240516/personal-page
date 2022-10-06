@@ -9,7 +9,7 @@ export default function GalleryItem({ image, name, url, technologies = [] }) {
 
   const onKeyPress = () => {
     setIsOpenItem(true);
-  }
+  };
   return (
     <>
       <div
@@ -36,8 +36,11 @@ export default function GalleryItem({ image, name, url, technologies = [] }) {
       <Popup isOpen={isOpenItem} setIsOpen={setIsOpenItem}>
         <h2 className="popup-project-title">{name}</h2>
         <img src={image} alt={`Imagen del proyecto ${name}`} height="350px" width="350px" />
-        <p><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></p>
-        
+        <p>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {name}
+          </a>
+        </p>
       </Popup>
     </>
   );
