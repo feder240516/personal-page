@@ -75,7 +75,7 @@ const projects = {
 };
 
 export default function MainPage() {
-  const [selectedSwitchValue, setSelectedSwitchValue] = useState('own');
+  const [selectedSwitchValue, setSelectedSwitchValue] = useState(projectTypes.OWN);
 
   const onChangeProjectType = (projectTypeId) => {
     setSelectedSwitchValue(projectTypeId);

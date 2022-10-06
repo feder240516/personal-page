@@ -1,3 +1,5 @@
+@use '../../../globals.scss';
+
 .gallery-item {
   background-color: white;
   border-radius: 12px;
@@ -14,5 +16,32 @@
 
   .tech-chips {
     margin: 10px 0;
+  }
+}
+
+.gallery-item-popup {
+  margin: 0 auto;
+  padding: 16px;
+  width: max-content;
+
+  h2 {
+    margin: 4px 0 8px;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 16px;
+    margin-top: 8px;
+    text-align: center;
+    a {
+      align-items: center;
+      background-color: globals.$primary-color;
+      border-radius: 32px;
+      color: globals.$secondary-color;
+      display: inline-flex;
+      text-decoration: none;
+      font-size: 24px;
+      padding: 8px 24px;
+    }
   }
 }

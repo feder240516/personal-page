@@ -15,10 +15,11 @@ $overlay-color: #aaaaaaaa;
   .popup-content {
     --animation-time: 500ms;
     background-color: globals.$secondary-color;
+    border-radius: 24px;
     box-sizing: border-box;
     grid-column: 1;
     grid-row: 1;
-    margin: 180px;
+    margin: auto;
     position: relative;
     transform: scale(1);
     transition: all var(--animation-time, 0);
