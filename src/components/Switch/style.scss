@@ -1,6 +1,7 @@
 @use "../../globals.scss";
 
 .switch {
+  margin-bottom: 16px;
   width: max-content;
 
   input[type=radio] {
