@@ -3,11 +3,7 @@ import React from 'react';
 import './style.scss';
 
 export default function Chip({ name }) {
-  return (
-    <span className="chip-badge">
-      {name}
-    </span>
-  );
+  return <span className="chip-badge">{name}</span>;
 }
 
 Chip.propTypes = {

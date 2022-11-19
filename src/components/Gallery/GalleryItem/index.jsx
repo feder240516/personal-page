@@ -6,10 +6,20 @@ import Popup from '../../Popup';
 
 export default function GalleryItem({ image, name, url, technologies = [] }) {
   const [isOpenItem, setIsOpenItem] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(0);
 
   const onKeyPress = () => {
     setIsOpenItem(true);
   };
+
+  const prevImage = () => {
+    setSelectedImage((state) => (state + image.length - 1) % image.length);
+  };
+
+  const nextImage = () => {
+    setSelectedImage((state) => (state + 1) % image.length);
+  };
+
   return (
     <>
       <div
@@ -22,12 +32,12 @@ export default function GalleryItem({ image, name, url, technologies = [] }) {
         <figure>
           {/* <a href={url} target="_blank" rel="noopener noreferrer"> */}
           {/* <button  type="button"> */}
-          <img src={image} alt={`Imagen del proyecto ${name}`} height="350px" width="350px" />
+          <img src={image[0]} alt={`Imagen del proyecto ${name}`} height="200px" width="200px" />
           {/* </button> */}
           {/* </a> */}
           <section className="tech-chips">
             {technologies.map((tech) => (
-              <Chip name={tech} />
+              <Chip name={tech} key={tech} />
             ))}
           </section>
           <figcaption>{name}</figcaption>
@@ -37,13 +47,35 @@ export default function GalleryItem({ image, name, url, technologies = [] }) {
         <div className="gallery-item-popup">
           <h2 className="popup-project-title">{name}</h2>
           <div className="image-carousel">
-            <button className="carousel-btn carousel-left-arrow" type="button">
-              <i className="material-icons">chevron_left</i>
-            </button>
-            <img src={image} alt={`Imagen del proyecto ${name}`} height="350px" width="350px" />
-            <button className="carousel-btn carousel-right-arrow" type="button">
-              <i className="material-icons">chevron_right</i>
-            </button>
+            {image.length > 1 ? (
+              <button
+                className="carousel-btn carousel-left-arrow"
+                type="button"
+                onClick={prevImage}
+              >
+                <i className="material-icons">chevron_left</i>
+              </button>
+            ) : null}
+            <div className="image-wrapper" style={{ '--index': selectedImage }}>
+              {image.map((singleImage) => (
+                <img
+                  src={singleImage}
+                  alt={`Imagen del proyecto ${name}`}
+                  height="500px"
+                  width="500px"
+                  key={singleImage}
+                />
+              ))}
+            </div>
+            {image.length > 1 ? (
+              <button
+                className="carousel-btn carousel-right-arrow"
+                type="button"
+                onClick={nextImage}
+              >
+                <i className="material-icons">chevron_right</i>
+              </button>
+            ) : null}
           </div>
           <p>
             <a href={url} target="_blank" rel="noopener noreferrer">

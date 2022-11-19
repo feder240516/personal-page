@@ -7,7 +7,7 @@ export default function Switch({ options, onSelection, groupName }) {
     <div className="switch">
       {options.map((option, i) => (
         // eslint-disable-next-line jsx-a11y/label-has-associated-control
-        <span className="switch-button">
+        <span className="switch-button" key={option.id}>
           <input
             id={`switch-group-${groupName}-${option.id}`}
             type="radio"
