@@ -30,5 +30,6 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'react/jsx-key': 2,
   },
 };
