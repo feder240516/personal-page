@@ -6,7 +6,7 @@ import './style.scss';
 export default function Gallery({ items }) {
   return (
     <section className="gallery">
-      {items.map(({ name, img, url, message, technologies }, i) => (
+      {items.map(({ name, img, url, message, technologies }) => (
         <GalleryItem
           image={img}
           name={name}

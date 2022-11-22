@@ -57,8 +57,8 @@ button.circle, .sub-menu button {
     width:$circle-size;
     height:$circle-size;
     position: absolute;
-    top: -$circle-size / 2;
-    left: -$circle-size / 2;
+    top: calc(-$circle-size / 2);
+    left: calc(-$circle-size / 2);
     z-index: 10;
     -webkit-box-shadow: $menu-shadow; 
     box-shadow: $menu-shadow;

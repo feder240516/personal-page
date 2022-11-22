@@ -10,6 +10,7 @@ export default function GalleryItemPopup({
   message,
   isOpenItem,
   setIsOpenItem,
+  // eslint-disable-next-line no-unused-vars
   technologies = [],
 }) {
   const [selectedImage, setSelectedImage] = useState(0);

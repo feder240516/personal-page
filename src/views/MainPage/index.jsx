@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Bio from '../../components/Bio';
 import Photo from '../../components/Photo';
-import CornerMenu from '../../components/CornerMenu';
 import Gallery from '../../components/Gallery';
 import Switch from '../../components/Switch';
 import './style.scss';
@@ -12,7 +11,6 @@ import healthAppFullImg3 from '../../assets/img/health app full 3.png';
 import healthAppFullImg4 from '../../assets/img/health app full 4.png';
 import healthAppFullImg5 from '../../assets/img/health app full 5.png';
 import letterImg from '../../assets/img/letter.jpg';
-import letterFullImg1 from '../../assets/img/letter full 1.jpg';
 import slidePuzzleImg from '../../assets/img/slidePuzzle.jpg';
 import sunBeachImg from '../../assets/img/SunBeach mobile.png';
 import sunBeachDesktopImg from '../../assets/img/SunBeach desktop.jpg';
@@ -25,7 +23,6 @@ import sunBeachMobileFullImg2 from '../../assets/img/SunBeach mobile full 2.jpg'
 import sunBeachMobileFullImg3 from '../../assets/img/SunBeach mobile full 3.jpg';
 import sunBeachMobileFullImg4 from '../../assets/img/SunBeach mobile full 4.jpg';
 import todoAppImg from '../../assets/img/TodoApp.jpg';
-import todoAppFullImg from '../../assets/img/TodoApp full 1.jpg';
 import projectTypes from '../../core/constants/projectTypes';
 import porImg from '../../assets/img/por.jpg';
 import mcImg from '../../assets/img/mc.jpg';
