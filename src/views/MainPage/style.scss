@@ -1,13 +1,27 @@
 .main-page {
   .page-1 {
     display: flex;
-    max-width:100%;
+    flex-direction: row;
+    max-width:1100px;
     box-sizing: border-box;
-    margin: 100px;
+    margin: 100px auto;
     align-items: center;
   }
 
   .page-2 {
-    margin: 100px;
+    margin: 100px auto;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-page {
+    .page-1 {
+      flex-direction: column;
+      margin: 100px 20px;
+    }
   }
 }
