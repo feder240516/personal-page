@@ -1,0 +1,33 @@
+@use "../../globals.scss";
+
+.switch {
+  margin-bottom: 16px;
+  width: max-content;
+
+  input[type=radio] {
+    display: none;
+
+    &+label {
+      background-color: globals.$secondary-color;
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 8px;
+      user-select: none;
+    }
+
+    &:checked+label {
+      background-color: globals.$primary-color;
+    }
+  }
+
+  .switch-button {
+
+    &:first-child label {
+      border-radius: 8px 0 0 8px;
+    }
+
+    &:last-child label {
+      border-radius: 0 8px 8px 0;
+    }
+  }
+}

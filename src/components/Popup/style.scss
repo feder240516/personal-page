@@ -1,0 +1,41 @@
+@use "../../globals.scss";
+
+$overlay-color: #aaaaaaaa;
+
+.popup-wrapper {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .popup-content {
+    --animation-time: 500ms;
+    background-color: globals.$secondary-color;
+    border-radius: 24px;
+    box-sizing: border-box;
+    grid-column: 1;
+    grid-row: 1;
+    margin: auto;
+    position: relative;
+    transform: scale(1);
+    transition: all var(--animation-time, 0);
+    z-index: 5;
+
+    &.unmounted {
+      transform: scale(0);
+    }
+  }
+
+  .popup-overlay {
+    background-color: $overlay-color;
+    color: white;
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    z-index: 1;
+  }
+}

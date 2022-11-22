@@ -3,12 +3,11 @@ import './style.scss';
 
 export default function Bio() {
   return (
-    <div className="bio">
-      I am Federico, a web developer and a computer engineering student
+    <p className="bio">
+      I am Federico, a software developer and a computer engineer
       <br />
       <br />
-      Scroll down to learn more about me or click in the menu button, on the top left corner to
-      navigate.
-    </div>
+      Scroll down to check the projects I have worked on during my professional career.
+    </p>
   );
 }
