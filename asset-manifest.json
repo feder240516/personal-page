@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/personal-page/static/css/main.ad5490be.chunk.css",
-    "main.js": "/personal-page/static/js/main.b57a5c84.chunk.js",
-    "main.js.map": "/personal-page/static/js/main.b57a5c84.chunk.js.map",
-    "runtime-main.js": "/personal-page/static/js/runtime-main.b3429932.js",
-    "runtime-main.js.map": "/personal-page/static/js/runtime-main.b3429932.js.map",
-    "static/js/2.7209923f.chunk.js": "/personal-page/static/js/2.7209923f.chunk.js",
-    "static/js/2.7209923f.chunk.js.map": "/personal-page/static/js/2.7209923f.chunk.js.map",
-    "static/js/3.115e2ed3.chunk.js": "/personal-page/static/js/3.115e2ed3.chunk.js",
-    "static/js/3.115e2ed3.chunk.js.map": "/personal-page/static/js/3.115e2ed3.chunk.js.map",
+    "main.js": "/personal-page/static/js/main.c5f7ac7d.chunk.js",
+    "main.js.map": "/personal-page/static/js/main.c5f7ac7d.chunk.js.map",
+    "runtime-main.js": "/personal-page/static/js/runtime-main.8f36e188.js",
+    "runtime-main.js.map": "/personal-page/static/js/runtime-main.8f36e188.js.map",
+    "static/js/2.e1419ee4.chunk.js": "/personal-page/static/js/2.e1419ee4.chunk.js",
+    "static/js/2.e1419ee4.chunk.js.map": "/personal-page/static/js/2.e1419ee4.chunk.js.map",
+    "static/js/3.f725f93e.chunk.js": "/personal-page/static/js/3.f725f93e.chunk.js",
+    "static/js/3.f725f93e.chunk.js.map": "/personal-page/static/js/3.f725f93e.chunk.js.map",
     "index.html": "/personal-page/index.html",
     "static/css/main.ad5490be.chunk.css.map": "/personal-page/static/css/main.ad5490be.chunk.css.map",
-    "static/js/2.7209923f.chunk.js.LICENSE.txt": "/personal-page/static/js/2.7209923f.chunk.js.LICENSE.txt",
+    "static/js/2.e1419ee4.chunk.js.LICENSE.txt": "/personal-page/static/js/2.e1419ee4.chunk.js.LICENSE.txt",
     "static/media/SunBeach desktop full 1.2e90f41a.jpg": "/personal-page/static/media/SunBeach desktop full 1.2e90f41a.jpg",
     "static/media/SunBeach desktop full 2.81d701d0.jpg": "/personal-page/static/media/SunBeach desktop full 2.81d701d0.jpg",
     "static/media/SunBeach desktop full 3.6ca95e99.jpg": "/personal-page/static/media/SunBeach desktop full 3.6ca95e99.jpg",
@@ -45,9 +45,9 @@
     "static/media/tetris.b1f994ad.jpg": "/personal-page/static/media/tetris.b1f994ad.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b3429932.js",
-    "static/js/2.7209923f.chunk.js",
+    "static/js/runtime-main.8f36e188.js",
+    "static/js/2.e1419ee4.chunk.js",
     "static/css/main.ad5490be.chunk.css",
-    "static/js/main.b57a5c84.chunk.js"
+    "static/js/main.c5f7ac7d.chunk.js"
   ]
 }
