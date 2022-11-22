@@ -1,5 +1,5 @@
 {
-  "name": "personal-page-federico",
+  "name": "personal-page",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "lintFix": "eslint src/**/*.js src/**/*.jsx --fix"
   },
@@ -51,6 +53,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
-  }
+  },
+  "homepage": "https://feder240516.github.io/personal-page/"
 }
