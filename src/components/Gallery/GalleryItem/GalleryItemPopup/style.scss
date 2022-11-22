@@ -2,8 +2,28 @@
 
 .gallery-item-popup {
   margin: 0 auto;
+  max-height: 90vh;
+  overflow-y: auto;
   padding: 16px;
+  position: relative;
   width: max-content;
+
+  .close-button {
+    background-color: transparent;
+    border-radius: 1000px;
+    color: globals.$primary-color;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    // width: 32px;
+    // height: 32px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    i {
+      font-size: 32px;
+    }
+  }
 
   h2 {
     color: globals.$primary-color;
@@ -31,24 +51,39 @@
 
     .image-wrapper {
       --index: 0;
-      --width: 524px;
-      width: var(--width);
-      height: 500px;
+      --has-arrows: 1;
+      --expected-img-width: 500px;
+      --max-img-width: calc(100vw - 80px - (var(--has-arrows) * 80px));
+      --img-width: calc(min(var(--expected-img-width), var(--max-img-width)));
+      --img-margin: 24px;
+      --wrapper-width: calc(var(--img-width) + var(--img-margin));
+
+      width: var(--wrapper-width);
+      // height: 500px;
+      // max-height: 70vh;
       overflow: hidden;
       display: flex;
 
-      img {
+      .image-fixed-size {
+
         margin: 0 12px;
-        object-fit: contain;
         transition: transform 0.5s;
-        transform: translate(calc(var(--index) * var(--width) * -1), 0);
+        transform: translate(calc(var(--index) * var(--wrapper-width) * -1), 0);
+        display: flex;
+        align-items: center;
+        img {
+          object-fit: contain;
+          width: var(--img-width);
+          height: 500px;
+          max-height: calc(100vh - 160px);
+        }
       }
     }
   }
 
   p {
-    margin-bottom: 16px;
-    margin-top: 8px;
+    margin: 8px auto 16px;
+    max-width: fit-content;
     text-align: center;
 
     a {
