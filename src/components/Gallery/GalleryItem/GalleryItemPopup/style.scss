@@ -1,6 +1,12 @@
 @use '../../../../globals.scss';
 
 .gallery-item-popup {
+  --has-arrows: 1;
+  --expected-img-width: 500px;
+  --max-img-width: calc(100vw - 80px - (var(--has-arrows) * 80px));
+  --img-width: calc(min(var(--expected-img-width), var(--max-img-width)));
+  --img-margin: 24px;
+  --wrapper-width: calc(var(--img-width) + var(--img-margin));
   margin: 0 auto;
   max-height: 90vh;
   overflow-y: auto;
@@ -51,12 +57,6 @@
 
     .image-wrapper {
       --index: 0;
-      --has-arrows: 1;
-      --expected-img-width: 500px;
-      --max-img-width: calc(100vw - 80px - (var(--has-arrows) * 80px));
-      --img-width: calc(min(var(--expected-img-width), var(--max-img-width)));
-      --img-margin: 24px;
-      --wrapper-width: calc(var(--img-width) + var(--img-margin));
 
       width: var(--wrapper-width);
       // height: 500px;
@@ -83,7 +83,7 @@
 
   p {
     margin: 8px auto 16px;
-    max-width: fit-content;
+    width: var(--img-width);
     text-align: center;
 
     a {
