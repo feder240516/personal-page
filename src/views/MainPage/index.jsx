@@ -198,7 +198,7 @@ const projects = {
 };
 
 export default function MainPage() {
-  const [selectedSwitchValue, setSelectedSwitchValue] = useState(projectTypes.OWN);
+  const [selectedSwitchValue, setSelectedSwitchValue] = useState(projectTypes.WORK);
 
   const onChangeProjectType = (projectTypeId) => {
     setSelectedSwitchValue(projectTypeId);
@@ -215,8 +215,8 @@ export default function MainPage() {
         <Switch
           groupName="project-types"
           options={[
-            { name: 'Own Projects', id: projectTypes.OWN },
             { name: 'Work Projects', id: projectTypes.WORK },
+            { name: 'Own Projects', id: projectTypes.OWN },
           ]}
           onSelection={onChangeProjectType}
         />
