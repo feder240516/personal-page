@@ -1,6 +1,7 @@
 import { useLayoutEffect, useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
 
 function createAndAppendChild(parent, childID) {
   const child = document.createElement('div');
@@ -34,3 +35,13 @@ export default function Portal({ children, wrapperID = 'default-portal-wrapper-i
   if (!wrapperElement || !portalElement) return null;
   return createPortal(children, portalElement);
 }
+
+Portal.propTypes = {
+  children: PropTypes.element.isRequired,
+  wrapperID: PropTypes.string,
+  portalID: PropTypes.string.isRequired,
+};
+
+Portal.defaultProps = {
+  wrapperID: 'default-portal-wrapper-id',
+};
