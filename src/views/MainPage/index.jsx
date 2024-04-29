@@ -130,21 +130,6 @@ const projects = {
       message: `A Tetris game made in C++ (Windows app).`,
     },
     {
-      name: 'Todo App',
-      img: [todoAppImg, todoAppImg],
-      url: [
-        {
-          name: 'Link',
-          address: 'https://feder240516.github.io/TodoApp/',
-        },
-        {
-          name: 'Source Code',
-          address: 'https://github.com/feder240516/TodoApp',
-        },
-      ],
-      technologies: ['Javascript', 'React', 'Sass', 'HTML'],
-    },
-    {
       name: 'Disk space management app',
       img: [checksizesImg, checksizesImg],
       url: [
@@ -160,6 +145,21 @@ const projects = {
       technologies: ['Python', 'Tkinter'],
       message: `A project in Python for checking folders and subfolders size. Useful when you are
         running low on disk space and want to identify heavy folders/files.`,
+    },
+    {
+      name: 'Todo App',
+      img: [todoAppImg, todoAppImg],
+      url: [
+        {
+          name: 'Link',
+          address: 'https://feder240516.github.io/TodoApp/',
+        },
+        {
+          name: 'Source Code',
+          address: 'https://github.com/feder240516/TodoApp',
+        },
+      ],
+      technologies: ['Javascript', 'React', 'Sass', 'HTML'],
     },
   ],
   [projectTypes.WORK]: [
