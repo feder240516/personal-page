@@ -8,7 +8,7 @@ export default function Gallery({ items }) {
     <section className="gallery">
       {items.map(({ name, img, url, message, technologies }) => (
         <GalleryItem
-          image={img}
+          images={img}
           name={name}
           url={url}
           message={message}

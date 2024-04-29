@@ -5,7 +5,7 @@ import GalleryItemPopup from './GalleryItemPopup';
 import './style.scss';
 
 export type GalleryItemProps = {
-  image: string;
+  images: string[];
   imagePlaceholder: string;
   name: string;
   url?: string;
@@ -16,7 +16,7 @@ export type GalleryItemProps = {
 };
 
 export default function GalleryItem({
-  image,
+  images,
   imagePlaceholder,
   name,
   url,
@@ -35,11 +35,16 @@ export default function GalleryItem({
 
   return (
     <>
-      <div className={`gallery-item ${clickable ? 'clickable' : ''}`} onClick={onClick} role="button" tabIndex={0}>
-        {image ? (
+      <div
+        className={`gallery-item ${clickable ? 'clickable' : ''}`}
+        onClick={onClick}
+        role="button"
+        tabIndex={0}
+      >
+        {images ? (
           <figure>
             <figcaption>{name}</figcaption>
-            <img src={image[0]} alt={`Imagen del proyecto ${name}`} />
+            <img src={images[0]} alt={`Imagen del proyecto ${name}`} />
             <section className="tech-chips">
               {technologies.map((tech) => (
                 <Chip name={tech} key={tech} />
@@ -57,7 +62,7 @@ export default function GalleryItem({
       </div>
       {clickable && (
         <GalleryItemPopup
-          images={image}
+          images={images}
           name={name}
           url={url}
           message={message}

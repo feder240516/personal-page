@@ -3,6 +3,7 @@ import Bio from '../../components/Bio';
 import Photo from '../../components/Photo';
 import Gallery from '../../components/Gallery';
 import Switch from '../../components/Switch';
+import Card from '../../components/Card/index.tsx';
 import './style.scss';
 import healthAppImg from '../../assets/img/health app.jpg';
 import healthAppFullImg1 from '../../assets/img/health app full 1.png';
@@ -36,7 +37,6 @@ import cat3Img from '../../assets/img/cat3.jpg';
 import cat4Img from '../../assets/img/cat4.jpg';
 import checksizesImg from '../../assets/img/checksizes.jpg';
 import tetrisImg from '../../assets/img/tetris.jpg';
-import Card from '../../components/Card';
 
 const projects = {
   [projectTypes.OWN]: [
@@ -217,7 +217,7 @@ export default function MainPage() {
       {/* <CornerMenu /> */}
       <section className="page-1">
         <Card>
-          <div className='card-content'>
+          <div className="card-content">
             <Bio />
             <Photo />
           </div>
