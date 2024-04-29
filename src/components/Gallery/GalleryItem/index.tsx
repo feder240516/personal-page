@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import Chip from './Chip';
 import GalleryItemPopup from './GalleryItemPopup';
 import './style.scss';
 
 export type GalleryItemProps = {
-  images: string[];
-  imagePlaceholder: string;
+  images?: string[];
+  imagePlaceholder?: string;
   name: string;
   url?: string;
   message?: string;
@@ -73,17 +72,3 @@ export default function GalleryItem({
     </>
   );
 }
-
-GalleryItem.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  url: PropTypes.string,
-  message: PropTypes.string,
-  technologies: PropTypes.arrayOf(PropTypes.string),
-};
-
-GalleryItem.defaultProps = {
-  url: undefined,
-  message: undefined,
-  technologies: [],
-};

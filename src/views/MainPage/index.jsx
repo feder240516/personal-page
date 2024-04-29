@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Bio from '../../components/Bio';
 import Photo from '../../components/Photo';
-import Gallery from '../../components/Gallery';
+import Gallery from '../../components/Gallery/index.tsx';
 import Switch from '../../components/Switch';
 import Card from '../../components/Card/index.tsx';
 import './style.scss';
@@ -232,7 +232,10 @@ export default function MainPage() {
           ]}
           onSelection={onChangeProjectType}
         />
-        <Gallery items={projects[selectedSwitchValue]} />
+        <Gallery
+          items={projects[selectedSwitchValue]}
+          andMore={selectedSwitchValue === projectTypes.WORK}
+        />
       </section>
     </main>
   );
