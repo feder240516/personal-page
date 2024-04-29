@@ -1,4 +1,4 @@
-@use '../../../globals.scss';
+@use "../../../globals.scss";
 
 .gallery-item {
   background-color: white;
@@ -6,7 +6,10 @@
   box-shadow: 8px 8px 12px 0px rgb(0 0 0 / 25%);
   margin: 8px;
   padding: 24px;
-  cursor: pointer;
+
+  &.clickable {
+    cursor: pointer;
+  }
 
   figure {
     // --height: 200px;
@@ -19,7 +22,7 @@
       margin-bottom: 12px;
       text-align: center;
     }
-  
+
     img {
       height: var(--card-image-height);
       width: var(--card-image-width);
@@ -27,6 +30,27 @@
     }
   }
 
+  .figure-placeholder {
+    width: var(--card-image-width);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    .placeholder {
+      color: globals.$primary-color;
+      font-size: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1
+    }
+    .placeholder-subtitle {
+      flex: 0
+    }
+  }
 
   .tech-chips {
     margin: 10px 0;

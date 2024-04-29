@@ -4,7 +4,7 @@ import Popup from '../../../Popup';
 import './style.scss';
 
 export default function GalleryItemPopup({
-  images,
+  images = [],
   name,
   url,
   message,
@@ -37,28 +37,38 @@ export default function GalleryItemPopup({
           <i className="material-icons">cancel</i>
         </button>
         <h2 className="popup-project-title">{name}</h2>
-        <div className="image-carousel">
-          {mustShowArrows ? (
-            <button className="carousel-btn carousel-left-arrow" type="button" onClick={prevImage}>
-              <i className="material-icons">chevron_left</i>
-            </button>
-          ) : null}
-          <div
-            className="image-wrapper"
-            style={{ '--index': selectedImage, '--has-arrows': mustShowArrows ? 1 : 0 }}
-          >
-            {usedImages.map((singleImage) => (
-              <div className="image-fixed-size" key={singleImage}>
-                <img src={singleImage} alt={`Imagen del proyecto ${name}`} />
-              </div>
-            ))}
+        {usedImages && (
+          <div className="image-carousel">
+            {mustShowArrows ? (
+              <button
+                className="carousel-btn carousel-left-arrow"
+                type="button"
+                onClick={prevImage}
+              >
+                <i className="material-icons">chevron_left</i>
+              </button>
+            ) : null}
+            <div
+              className="image-wrapper"
+              style={{ '--index': selectedImage, '--has-arrows': mustShowArrows ? 1 : 0 }}
+            >
+              {usedImages.map((singleImage) => (
+                <div className="image-fixed-size" key={singleImage}>
+                  <img src={singleImage} alt={`Imagen del proyecto ${name}`} />
+                </div>
+              ))}
+            </div>
+            {mustShowArrows ? (
+              <button
+                className="carousel-btn carousel-right-arrow"
+                type="button"
+                onClick={nextImage}
+              >
+                <i className="material-icons">chevron_right</i>
+              </button>
+            ) : null}
           </div>
-          {mustShowArrows ? (
-            <button className="carousel-btn carousel-right-arrow" type="button" onClick={nextImage}>
-              <i className="material-icons">chevron_right</i>
-            </button>
-          ) : null}
-        </div>
+        )}
         {urlList.map((singleUrl) => (
           <p key={singleUrl.address}>
             <a href={singleUrl.address} target="_blank" rel="noopener noreferrer">

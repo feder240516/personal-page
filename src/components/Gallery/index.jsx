@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GalleryItem from './GalleryItem';
+import GalleryItem from './GalleryItem/index.tsx';
 import './style.scss';
 
 export default function Gallery({ items }) {
@@ -16,6 +16,15 @@ export default function Gallery({ items }) {
           key={name}
         />
       ))}
+      <GalleryItem
+        imagePlaceholder="And more! (Confidential)"
+        name=""
+        message="I have worked in some other projects that I cannot post here, but I may be able to discuss with you about them in a call or email"
+        subTitle="I have worked in some other projects that I cannot post here, but I may be able to discuss with you about them in a call or email"
+        technologies={[]}
+        key="And more"
+        clickable={false}
+      />
     </section>
   );
 }

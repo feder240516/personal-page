@@ -6,6 +6,10 @@
     box-sizing: border-box;
     margin: 100px auto;
     align-items: center;
+    .card-content {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .page-2 {
