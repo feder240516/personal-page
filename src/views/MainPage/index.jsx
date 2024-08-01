@@ -25,7 +25,7 @@ import sunBeachMobileFullImg3 from '../../assets/img/SunBeach mobile full 3.jpg'
 import sunBeachMobileFullImg4 from '../../assets/img/SunBeach mobile full 4.jpg';
 import todoAppImg from '../../assets/img/TodoApp.jpg';
 import projectTypes from '../../core/constants/projectTypes';
-import porImg from '../../assets/img/por.jpg';
+import porImg from '../../assets/img/por.png';
 import vusImg from '../../assets/img/vus.png';
 import mcImg from '../../assets/img/mc.jpg';
 import mcFullImg1 from '../../assets/img/mc full 1.jpg';
@@ -37,6 +37,7 @@ import cat3Img from '../../assets/img/cat3.jpg';
 import cat4Img from '../../assets/img/cat4.jpg';
 import checksizesImg from '../../assets/img/checksizes.jpg';
 import tetrisImg from '../../assets/img/tetris.jpg';
+import SimplePhoto from '../../components/Photo/Simple';
 
 const projects = {
   [projectTypes.OWN]: [
@@ -146,29 +147,23 @@ const projects = {
       message: `A project in Python for checking folders and subfolders size. Useful when you are
         running low on disk space and want to identify heavy folders/files.`,
     },
-    {
-      name: 'Todo App',
-      img: [todoAppImg, todoAppImg],
-      url: [
-        {
-          name: 'Link',
-          address: 'https://feder240516.github.io/TodoApp/',
-        },
-        {
-          name: 'Source Code',
-          address: 'https://github.com/feder240516/TodoApp',
-        },
-      ],
-      technologies: ['Javascript', 'React', 'Sass', 'HTML'],
-    },
+    // {
+    //   name: 'Todo App',
+    //   img: [todoAppImg, todoAppImg],
+    //   url: [
+    //     {
+    //       name: 'Link',
+    //       address: 'https://feder240516.github.io/TodoApp/',
+    //     },
+    //     {
+    //       name: 'Source Code',
+    //       address: 'https://github.com/feder240516/TodoApp',
+    //     },
+    //   ],
+    //   technologies: ['Javascript', 'React', 'Sass', 'HTML'],
+    // },
   ],
   [projectTypes.WORK]: [
-    {
-      name: 'VUS',
-      img: [vusImg, vusImg],
-      technologies: ['Angular', 'Java', 'Typescript'],
-      message: `VUS (Ventanilla Única de servicios) is a digital platform for democratizing digital access to the citizens transit data`,
-    },
     {
       name: 'Porvenir App',
       img: [porImg, porImg],
@@ -186,6 +181,12 @@ const projects = {
       technologies: ['React', 'Java', 'Sass', 'Typescript'],
       message: `Porvenir App allows their affiliates to check their products in the app and make
         multiple different money transactions.`,
+    },
+    {
+      name: 'VUS',
+      img: [vusImg, vusImg],
+      technologies: ['Angular', 'Java', 'Typescript'],
+      message: `VUS (Ventanilla Única de servicios) is a digital platform for democratizing digital access to the citizens transit data`,
     },
     {
       name: 'MC Union',
@@ -215,20 +216,16 @@ export default function MainPage() {
   return (
     <main className="main-page">
       {/* <CornerMenu /> */}
-      <section className="page-1">
-        <Card>
-          <div className="card-content">
-            <Bio />
-            <Photo />
-          </div>
-        </Card>
+      <section id="about-me" className="page-1">
+        <Bio />
+        <SimplePhoto />
       </section>
-      <section className="page-2">
+      <section id="projects-list" className="page-2">
         <Switch
           groupName="project-types"
           options={[
             { name: 'Work Projects', id: projectTypes.WORK },
-            { name: 'Own Projects', id: projectTypes.OWN },
+            { name: 'Personal Projects', id: projectTypes.OWN },
           ]}
           onSelection={onChangeProjectType}
         />

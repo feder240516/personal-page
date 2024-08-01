@@ -11,12 +11,13 @@ $overlay-color: #aaaaaaaa;
   height: 100%;
   top: 0;
   left: 0;
-
+  
+  --animation-time: 500ms;
   .popup-content {
-    --animation-time: 500ms;
-    background-color: globals.$secondary-color;
+    background-color: globals.$card-bg-color;
     border-radius: 24px;
     box-sizing: border-box;
+    color: white;
     grid-column: 1;
     grid-row: 1;
     margin: auto;
@@ -24,10 +25,6 @@ $overlay-color: #aaaaaaaa;
     transform: scale(1);
     transition: all var(--animation-time, 0);
     z-index: 5;
-
-    &.unmounted {
-      transform: scale(0);
-    }
   }
 
   .popup-overlay {
@@ -36,6 +33,16 @@ $overlay-color: #aaaaaaaa;
     grid-column: 1;
     grid-row: 1;
     margin: 0;
+    opacity: 1;
     z-index: 1;
+    transition: opacity var(--animation-time, 0);
+  }
+  &.unmounted {
+    .popup-content {
+      transform: scale(0);
+    }
+    .popup-overlay {
+      opacity: 0;
+    }
   }
 }

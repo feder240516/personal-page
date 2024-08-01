@@ -29,10 +29,10 @@ export default function Gallery({ items, andMore }: GalleryProps) {
       ))}
       {andMore && (
         <GalleryItem
-          imagePlaceholder="And more! (Confidential)"
+          imagePlaceholder="And more!"
           name=""
-          message="I have worked in some other projects that I cannot post here, but I may be able to discuss with you about them in a call or email"
-          subTitle="I have worked in some other projects that I cannot post here, but I may be able to discuss with you about them in a call or email"
+          message="I have worked on some other projects that I cannot post here, but I may be able to discuss them with you in a call or email."
+          subTitle="I have worked on some other projects that I cannot post here, but I may be able to discuss them with you in a call or email."
           technologies={[]}
           key="And more"
           clickable={false}

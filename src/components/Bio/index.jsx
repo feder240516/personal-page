@@ -4,10 +4,9 @@ import './style.scss';
 export default function Bio() {
   return (
     <p className="bio">
-      I am Federico, a software developer and a computer engineer
+      Hi, I am Federico, a passionate full-stack developer with 4+ years of experience.
       <br />
       <br />
-      Scroll down to check the projects I have worked on during my professional career.
     </p>
   );
 }

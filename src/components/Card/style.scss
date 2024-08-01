@@ -1,6 +1,9 @@
+@use "../../globals.scss";
+
 .card {
-  background-color: white;
+  background-color: globals.$card-bg-color;
   border-radius: 12px;
+  color: white;
   box-shadow: 8px 8px 12px 0px rgb(0 0 0 / 25%);
   margin: 8px;
   padding: 24px;

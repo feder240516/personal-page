@@ -15,13 +15,13 @@ export default function Popup({ children, isOpen, setIsOpen }) {
   return (
     <Portal>
       {shouldRenderPopup ? (
-        <div className="popup-wrapper">
+        <div className={`popup-wrapper ${showFullSizePopup ? '' : 'unmounted'}`}>
           <div
             className="popup-overlay"
             onClick={() => (allowInteraction ? setIsOpen(false) : null)}
             role="presentation"
           />
-          <div className={`popup-content ${showFullSizePopup ? '' : 'unmounted'}`}>{children}</div>
+          <div className="popup-content">{children}</div>
         </div>
       ) : null}
     </Portal>
